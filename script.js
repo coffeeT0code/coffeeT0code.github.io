@@ -11,8 +11,9 @@ function startGame() {
         (Outfit 2): Your work uniform: A grey T-shirt and some nice blue-jeans.
         (Outfit 3): Or you don't even bother to get dressed. The pyjama is just fine. 
         The Choose wisely, this event could change your life.`);
+        
         } while (
-            chooseClothes !== 'Outfit 1' && chooseClothes !== 'Outfit 2' && chooseClothes !== 'Outfit 3'
+            chooseClothes !== 'Outfit 1' && chooseClothes !== 'Outfit 2' && chooseClothes !== 'Outfit 3' && chooseClothes !== null
         )
         switch (chooseClothes) {
             case 'Outfit 1':
@@ -23,8 +24,10 @@ function startGame() {
             Option (2) "I dont know any entrycode, but could you please let me in?"
             Option (3) "Sure, the entrycode is 26031973"`);
 
-
-                if (talkToBouncer.toLowerCase() === '1') {
+                if(talkToBouncer === null) {
+                    alert('OK bye')
+                } 
+                else if (talkToBouncer === '1') {
                     let acceptOffer = confirm(`The bouncer lets you think for a minute, and then it seems like he pittied you because he sees how well dressed you are for this occasion. He offers to let you in if you promise not to tell anyone. (Press OK to accept his offer)`);
 
                     if (acceptOffer) {
@@ -43,7 +46,7 @@ function startGame() {
                         alert('What? Now you get the chance to meet your role model and then you decide to leave? Well ok then. Live your life full of regrets. FIN');
                     }
 
-                } else if (talkToBouncer.toLowerCase() === '2') {
+                } else if (talkToBouncer === '2') {
                     alert('The bouncer tells you no and you go home feeling miserable about your failed mission.');
                 } else {
                     alert('The bouncer is clearly surprised that you know the correct answer. You are sure he saw your little panic attack, when he asked for the entrycode, but you had never thought that Larry Page himself would make the mistake to use his own date of birth as password. Lucky you!');
@@ -74,7 +77,7 @@ function startGame() {
             Option (3) "Sure, the entrycode is 26031973"`);
 
 
-                if (talkToBouncerO2.toLowerCase() === '1') {
+                if (talkToBouncerO2 === '1') {
                     let acceptOffer = confirm(`The bouncer lets you think for a minute, but then he recognized that you knew the secret dresscode for today. He offers to let you in if you promise not to tell anyone. (Press OK to accept his offer)`);
 
                     if (acceptOffer) {
@@ -92,7 +95,7 @@ function startGame() {
                         alert('What? Now you get the chance to meet your role model and then you decide to leave? Well ok then. Live your life full of regrets. FIN');
                     }
 
-                } else if (talkToBouncerO2.toLowerCase() === '2') {
+                } else if (talkToBouncerO2 === '2') {
                     alert('The bouncer tells you no and you go home feeling miserable about your failed mission.');
                 } else {
                     alert('The bouncer is clearly surprised that you know the correct answer. You are sure he saw your little panic attack, when he asked for the entrycode, but you had never thought that Larry Page himself would make the mistake to use his own date of birth as password. Lucky you!');
