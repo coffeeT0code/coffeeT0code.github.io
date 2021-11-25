@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>textbased Adventure</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div id='content'>
-        <div id='control'>
-        <h1>THE Larry Page's Party</h1>
-        <button onclick="startGame()" class="button-50" role="button">Start Adventure</button>
+    <div id=gameboard>
+        <h1>
+            Rock Paper scissors
+        </h1>
+        <p>Rules: Rock breaks scissors, scissors cuts paper and paper covers rock!</p>
+        <p>Choose wisely and win against the Computer!</p>
+        <div id="display">
+            <div class="displayChoice">
+                Computer chooses:
+                <div id=pictureChoice><span id="computerChoice" class="acutalChoice"></span></div>
+            </div>
+
+            <div class="displayChoice">
+                <div>Your choice:</div>
+                <div id="pictureChoice"><span id="playerChoice" class="acutalChoice"></span></div>
+            </div>
+
+            </div>
+            
+            <div class="displayChoice">
+                Result:
+                <span id="result"></span>
         </div>
+   
+    <div id=buttons>
+        <button class="choose" id="rock">Rock</button>
+        <button class="choose" id="paper">Paper</button>
+        <button class="choose" id="scissors">Scissors</button>
     </div>
+</div>
     <script src="./script.js"></script>
 </body>
+
 </html>
